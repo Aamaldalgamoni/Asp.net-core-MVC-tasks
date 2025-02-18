@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section header{
+    <link rel="stylesheet" href="~/css/index.css" />
+}
+
+<div class="text-center">
+    <h1 class="display-4" style="font:bold">Extraordinary rooms with elegent,yut a rustic atmosphere</h1>
+</div>
+
+@{
+    string []img = { "https://th.bing.com/th/id/OIP.lF5VK1jCX1Jq0Im8ST1FFgHaE8?w=256&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7", "https://th.bing.com/th/id/OIP.6NLV16bzAw5tAwKdmk8JmgAAAA?rs=1&pid=ImgDetMain", "https://th.bing.com/th/id/OIP.ETQpUS3wKll91XlggYSEJQHaE8?rs=1&pid=ImgDetMain" };
+    string[] disc = { "Apartment with amazing park view", "Double Delox room double bed", "luxury apartment-ground floor" };
+    string[] price = { "$45.00", "$35.00", "$40.00" };
+    string[] view = { "View", "View", "View" };
+}
+
+<div style="display:flex;justify-content:space-around">
+@for(int i = 0; i < 3; i++)
+{
+    <div class="card" style="width: 18rem;">
+        <img src="@img[i]" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title" style="text-align:center">@disc[i]</h5>
+            <p style="color:red;text-decoration:underline;text-align:center">@price[i]</p>
+            <a href="#" style="padding-left:7vw;text-decoration-color:orange;color:black">@view[i]</a>
+        </div>
+    </div>
+}
+</div>

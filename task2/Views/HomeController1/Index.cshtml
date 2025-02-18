@@ -1,0 +1,76 @@
+﻿@{
+    Layout = "~/Views/Shared/_adminlayoyt.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <button class="btn btn-primary" style="padding-left:-70vw;background-color:#5C5470" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Admin Menu</button>
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header" style="background-color:#31363F;color:aliceblue">
+            <h5 class="offcanvas-title"  offcanvasWithBothOptionsLabel">Admin menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" style="background-color:#31363F;color:aliceblue">
+            <p>Dash board</p>
+            <p>Users</p>
+            <p>Dash board</p>
+            <p>setting</p>
+            <p>log out</p>
+        </div>
+    </div>
+
+    ﻿﻿@{
+
+
+        student[] students = new student[]
+        {
+    new student{Name="Abdallah",Age=28,Email="abdallah@gmail.com" },
+    new student{Name="sura",Age=29,Email="sura@gmail.com" },
+    new student{Name="salah",Age=30,Email="salah@gmail.com" }
+        };
+    }
+    @functions {
+        public class student
+        {
+            public string Name { get; set; }
+            public int Age { get; set; }
+            public string Email { get; set; }
+        }
+    }
+    <div class="bodyy">
+        <h1> Users Lists</h1>
+
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Username</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var s in students)
+                {
+                    <tr>
+                        <th>@s.Name</th>
+                        <td>@s.Age</td>
+                        <td>@s.Email</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+</body>
+</html>
