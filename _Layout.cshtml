@@ -4,20 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - test2</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> 
-    <link rel="stylesheet" href="~/css/about.css" sp-append-version="true" />
-    <link rel="stylesheet" href="~/css/contactus.css" sp-append-version="true" />
-    <link rel="stylesheet" href="~/css/bbbb.css" sp-append-version="true" />
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/site.css"  /> 
+    @* <link rel="stylesheet" href="~/css/about.css"  />
+    <link rel="stylesheet" href="~/css/contactus.css"  />
+    <link rel="stylesheet" href="~/css/bbbb.css" />
 
-
+ *@
 
     @* <link rel="stylesheet" href="~/test2.styles.css" asp-append-version="true" /> *@
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary" style="width: 100vw;height: 7vw">
-            <div class="container-fluid">
+            <div >
                 <a class="navbar-brand" href="#"><img src="img/TINZY-removebg-preview 1.png"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -58,7 +58,7 @@
                 </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#" style=" cursor: pointer;"><img class="iqone" src="img/user-sign-white-icon-vector-15479703-removebg-preview 1.png"></a>
+                    <a class="nav-link " href="#" style=" cursor: pointer;"><img class="iqone" src="~/img/user-sign-white-icon-vector-15479703-removebg-preview 1.png"></a>
                 </li>
                 </ul>
             </div>
@@ -66,17 +66,16 @@
         </nav>
 
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div >
+        
             @RenderBody()
-        </main>
     </div>
 
     <footer class="border-top footer text-muted">
         <!-- info section -->
         <div class="footer">
             <section class="info_section layout_padding2">
-                <div class="container">
+                <div >
                     <div class="row">
                         <!-- About Us Section -->
                         <div class="col-md-6 col-lg-3 info_col">

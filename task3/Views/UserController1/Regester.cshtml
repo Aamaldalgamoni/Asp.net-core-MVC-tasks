@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "Regester";
+}
+
+<h1>Regester</h1>
+
+
+<form action="Regester" method="post">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+    </div>
+
+    <div>
+        <label for="Email">Email</label>
+        <input type="email" id="Email" name="Email" required />
+    </div>
+
+    <div>
+        <label for="Password">Password</label>
+        <input type="password" id="Password" name="Password" required />
+    </div>
+
+    <div>
+        <label for="Returnpassword">Returnpassword</label>
+        <input type="password" id="Returnpassword" name="Returnpassword" required />
+    </div>
+
+    <div>
+        <button type="submit">Regester</button>
+    </div>
+</form>
+
+@if (ViewData["ErrorMessage"] != null)
+{
+    <div style="color: red;">
+        @ViewData["ErrorMessage"]
+    </div>
+}
