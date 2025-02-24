@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model List<Department>
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th><h1>Name</h1></th>
+            <th><h1>Location</h1></th>
+            <th><h1>Manager</h1></th>
+            <th><h1>Budget</h1></th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var department in Model)
+        {
+            <tr>
+                <td>@department.Name</td>
+                <td>@department.Location</td>
+                <td>@department.Manager</td>
+                <td>@department.Budget</td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>

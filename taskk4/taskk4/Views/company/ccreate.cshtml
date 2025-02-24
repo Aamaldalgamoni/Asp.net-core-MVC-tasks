@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "ccreate";
+}
+
+
+
+@model Department
+<h1>ccreate</h1>
+<form asp-action="ccreate" method="post">
+
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+
+    <br />
+
+    @Html.LabelFor(m => m.Location)
+    @Html.TextBoxFor(m => m.Location)
+    <br />
+    @Html.LabelFor(m => m.Manager)
+    @Html.TextBoxFor(m => m.Manager)
+    <br />
+
+    @Html.LabelFor(m => m.Budget)
+    @Html.TextBoxFor(m => m.Budget)
+
+    <br />
+
+    <button type="submit">Create</button>
+
+
+
+</form>

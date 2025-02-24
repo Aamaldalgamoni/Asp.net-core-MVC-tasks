@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+@model Store
+<h1>Create</h1>
+   <form asp-action="Create" method="post">
+
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)  
+
+    <br />
+
+   
+    @Html.LabelFor(m => m.Email)
+    @Html.TextBoxFor(m => m.Email) 
+
+    <br />
+
+    <button type="submit">Create</button>
+
+
+
+       </form>

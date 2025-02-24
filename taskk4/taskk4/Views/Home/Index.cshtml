@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Store>
+
+     <h1>Products List</h1>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th><h1>ID</h1></th>
+                <th><h1>Name</h1></th>
+                <th><h1>Email</h1></th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var store in Model)  
+            {
+                <tr>
+                    <td>@store.Id</td>
+                    <td>@store.Name</td>
+                    <td>@store.Email</td>
+               
+                </tr>
+            }
+        </tbody>
+    </table>
+
